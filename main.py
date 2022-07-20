@@ -17,9 +17,17 @@ ListaJ = [jogo1, jogo2, jogo3]
 app = Flask(__name__)
 
 
-@app.route('/inicio')
+@app.route('/')
 def ola():
     return render_template('lista.html',titulo='Meus Jogos', jogos=ListaJ)
 
+@app.route('/easteregg')
+def site():
+    return render_template('sitemaneiro.html',titulo='easter egg')
+
+
+@app.route('')
+def homepage():
+    return render_template('sitemaneiro.html',titulo='home')
 
 app.run()
