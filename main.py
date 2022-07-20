@@ -1,3 +1,4 @@
+from tkinter.messagebox import RETRY
 from flask import Flask, render_template
 
 
@@ -26,8 +27,13 @@ def site():
     return render_template('sitemaneiro.html',titulo='easter egg')
 
 
-@app.route('')
-def homepage():
-    return render_template('sitemaneiro.html',titulo='home')
+@app.route('/novo')
+def site2():
+    return render_template('novo.html',titulo='novo')
+
+    
+@app.route('/criar')
+def site3():
+    return render_template('novo.html',titulo='novo')
 
 app.run()
